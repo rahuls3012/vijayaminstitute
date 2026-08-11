@@ -1,0 +1,196 @@
+.vi-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.1rem 0;
+  background: transparent;
+  transition: background var(--vi-dur-md) var(--vi-ease), box-shadow var(--vi-dur-md) var(--vi-ease),
+    padding var(--vi-dur-md) var(--vi-ease);
+}
+
+.vi-navbar.is-scrolled,
+.vi-navbar.is-solid {
+  background: rgba(248, 246, 241, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 24px rgba(15, 42, 74, 0.08);
+  padding: 0.65rem 0;
+}
+
+.vi-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.vi-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--vi-font-display);
+  font-weight: 700;
+  font-size: 1.28rem;
+  color: #fff;
+  transition: color var(--vi-dur-sm) var(--vi-ease);
+}
+.vi-navbar.is-scrolled .vi-brand,
+.vi-navbar.is-solid .vi-brand {
+  color: var(--vi-navy-900);
+}
+
+.vi-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--vi-gold-600);
+  color: var(--vi-navy-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.vi-brand-sub {
+  display: block;
+  font-family: var(--vi-font-body);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vi-gold-400);
+}
+.vi-navbar.is-scrolled .vi-brand-sub,
+.vi-navbar.is-solid .vi-brand-sub {
+  color: var(--vi-gold-700);
+}
+
+.vi-nav-links {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .vi-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .vi-nav-links a {
+    position: relative;
+    font-weight: 600;
+    font-size: 0.94rem;
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0.3rem 0.1rem;
+    transition: color var(--vi-dur-sm) var(--vi-ease);
+  }
+
+  .vi-navbar.is-scrolled .vi-nav-links a,
+  .vi-navbar.is-solid .vi-nav-links a {
+    color: var(--vi-ink);
+  }
+
+  .vi-nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--vi-gold-600);
+    transition: width var(--vi-dur-sm) var(--vi-ease);
+  }
+
+  .vi-nav-links a:hover::after,
+  .vi-nav-links a.is-active::after {
+    width: 100%;
+  }
+
+  .vi-nav-links a.is-active {
+    color: var(--vi-gold-400) !important;
+  }
+  .vi-navbar.is-scrolled .vi-nav-links a.is-active,
+  .vi-navbar.is-solid .vi-nav-links a.is-active {
+    color: var(--vi-gold-700) !important;
+  }
+}
+
+.vi-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vi-nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+}
+.vi-navbar.is-scrolled .vi-nav-toggle,
+.vi-navbar.is-solid .vi-nav-toggle {
+  color: var(--vi-navy-900);
+  border-color: var(--vi-border);
+}
+
+@media (min-width: 992px) {
+  .vi-nav-toggle {
+    display: none;
+  }
+}
+
+.vi-mobile-menu {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(340px, 86vw);
+  height: 100vh;
+  background: var(--vi-navy-950);
+  z-index: 1100;
+  padding: 1.5rem;
+  transform: translateX(100%);
+  transition: transform var(--vi-dur-md) var(--vi-ease);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+.vi-mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.vi-mobile-menu a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.85rem 0.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.vi-mobile-menu a.is-active {
+  color: var(--vi-gold-400);
+}
+
+.vi-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 30, 54, 0.55);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--vi-dur-md) var(--vi-ease);
+}
+.vi-mobile-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,816 @@
+/* ---- Feature card ---- */
+.feature-card {
+  padding: 1.75rem;
+  height: 100%;
+}
+.feature-card h3 {
+  font-size: 1.12rem;
+  margin: 1rem 0 0.5rem;
+}
+.feature-card p {
+  color: var(--vi-ink-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ---- Course card ---- */
+.course-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.course-card-top {
+  padding: 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.course-card-body {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.course-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.35rem;
+}
+.course-card .category-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: var(--vi-navy-100);
+  color: var(--vi-navy-800);
+  white-space: nowrap;
+}
+.course-card p.desc {
+  color: var(--vi-ink-muted);
+  font-size: 0.92rem;
+  flex: 1;
+}
+.course-card .modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.65rem 0 1rem;
+}
+.course-card .mode-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: var(--vi-teal-100);
+  color: var(--vi-teal-700);
+}
+
+/* ---- Filter pills ---- */
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.filter-pill {
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--vi-border);
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--vi-ink);
+  transition: all var(--vi-dur-sm) var(--vi-ease);
+}
+.filter-pill:hover {
+  border-color: var(--vi-gold-600);
+}
+.filter-pill.is-active {
+  background: var(--vi-navy-900);
+  border-color: var(--vi-navy-900);
+  color: #fff;
+}
+
+.university-card {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+.university-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.university-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--vi-navy-100);
+  color: var(--vi-navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--vi-font-display);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.university-card h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+.university-card .loc {
+  font-size: 0.85rem;
+  color: var(--vi-ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.university-programmes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.university-programmes span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: var(--vi-gold-100);
+  color: var(--vi-gold-700);
+}
+
+/* ==========================================================================
+   University Profile — elaborate, mobile-first layout for the
+   Universities page only. Mobile styles are the base rules; desktop
+   overrides (alternating image/content layout) are added at the lg
+   breakpoint.
+   ========================================================================== */
+
+.university-profile {
+  border: 1px solid var(--vi-border);
+  border-radius: var(--vi-radius-lg);
+  background: var(--vi-paper-raised);
+  box-shadow: var(--vi-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--vi-dur-sm) var(--vi-ease);
+}
+.university-profile:hover {
+  box-shadow: var(--vi-shadow-lg);
+}
+
+/* --- Media (mobile-first: full-width image on top) --- */
+.university-profile-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--vi-navy-100);
+}
+.university-profile-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 700ms var(--vi-ease);
+}
+.university-profile:hover .university-profile-media img {
+  transform: scale(1.04);
+}
+.university-profile-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 30, 54, 0) 45%, rgba(10, 30, 54, 0.68) 100%);
+}
+.university-profile-media-tag {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 2;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(10, 30, 54, 0.5);
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+}
+.university-profile-logo {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  background: #fff;
+  color: var(--vi-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--vi-font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: var(--vi-shadow-sm);
+}
+.university-profile-rank {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--vi-navy-950);
+  background: var(--vi-gold-400);
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* --- Body --- */
+.university-profile-body {
+  padding: 1.35rem 1.15rem 1.5rem;
+}
+
+.university-profile-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vi-gold-700);
+  margin-bottom: 0.35rem;
+}
+
+.university-profile-body h3 {
+  font-size: 1.28rem;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.university-profile-body .loc {
+  font-size: 0.88rem;
+  color: var(--vi-ink-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.university-profile-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+.university-profile-stat {
+  padding: 0.7rem 0.75rem;
+  border-radius: 12px;
+  background: var(--vi-navy-100);
+}
+.university-profile-stat .stat-value {
+  display: block;
+  font-family: var(--vi-font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--vi-navy-900);
+  line-height: 1.25;
+}
+.university-profile-stat .stat-label {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--vi-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 0.15rem;
+}
+.university-profile-stat--accent {
+  background: var(--vi-teal-100);
+}
+.university-profile-stat--accent .stat-value {
+  color: var(--vi-teal-700);
+}
+
+.university-profile-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--vi-ink-muted);
+  margin-bottom: 0.55rem;
+}
+
+.university-profile-programmes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+.university-profile-programmes span {
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: var(--vi-gold-100);
+  color: var(--vi-gold-700);
+}
+
+.university-profile-modes {
+  font-size: 0.85rem;
+  color: var(--vi-ink-muted);
+  margin-bottom: 1.25rem;
+}
+
+.university-profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.university-profile-actions .btn-vi-primary,
+.university-profile-actions .btn-vi-ghost {
+  width: 100%;
+}
+.university-profile-website {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--vi-navy-700);
+  padding: 0.6rem 1rem;
+}
+.university-profile-website:hover {
+  color: var(--vi-gold-700);
+}
+
+/* --- Desktop: alternate image/content side-by-side per row --- */
+@media (min-width: 992px) {
+  .university-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+  .university-profile-media {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 340px;
+  }
+  .university-profile-body {
+    padding: 2.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .university-profile-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .university-profile-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .university-profile-actions .btn-vi-primary,
+  .university-profile-actions .btn-vi-ghost {
+    width: auto;
+  }
+  .university-profile.is-reversed {
+    grid-template-columns: 1fr 1fr;
+  }
+  .university-profile.is-reversed .university-profile-media {
+    order: 2;
+  }
+  .university-profile.is-reversed .university-profile-body {
+    order: 1;
+  }
+}
+
+/* ---- Source note strip ---- */
+.university-source-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.83rem;
+  color: var(--vi-ink-muted);
+  background: var(--vi-navy-100);
+  border-radius: var(--vi-radius-sm);
+  padding: 0.85rem 1rem;
+}
+.university-source-note i {
+  color: var(--vi-navy-700);
+  margin-top: 0.15rem;
+}
+
+/* ---- Learning mode card ---- */
+.mode-card {
+  padding: 2rem 1.75rem;
+  height: 100%;
+  position: relative;
+}
+.mode-card h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+}
+.mode-card p {
+  color: var(--vi-ink-muted);
+}
+
+/* ---- Document card ---- */
+.doc-card {
+  padding: 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.doc-card span.label {
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+/* ---- Stat card ---- */
+.stat-card {
+  padding: 1.6rem;
+  text-align: center;
+  height: 100%;
+}
+.stat-card .vi-icon-wrap {
+  margin: 0 auto 0.85rem;
+}
+.stat-card p {
+  color: var(--vi-ink-muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin: 0.35rem 0 0;
+}
+
+/* ---- Timeline ---- */
+.vi-timeline {
+  position: relative;
+  display: grid;
+  gap: 1.75rem;
+}
+@media (min-width: 992px) {
+  .vi-timeline {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+  }
+  .vi-timeline::before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 6%;
+    right: 6%;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--vi-gold-600) 0 10px, transparent 10px 18px);
+  }
+}
+.vi-timeline-step {
+  position: relative;
+  text-align: left;
+}
+.vi-timeline-num {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--vi-navy-900);
+  color: var(--vi-gold-400);
+  font-family: var(--vi-font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--vi-shadow-sm);
+}
+.vi-timeline-step h3 {
+  font-size: 1.02rem;
+  margin-bottom: 0.35rem;
+}
+.vi-timeline-step p {
+  font-size: 0.88rem;
+  color: var(--vi-ink-muted);
+}
+
+/* ---- Testimonial ---- */
+.testimonial-card {
+  padding: 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-card blockquote {
+  font-family: var(--vi-font-display);
+  font-size: 1.2rem;
+  color: var(--vi-navy-900);
+  margin: 0.75rem 0 1rem;
+}
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.testimonial-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--vi-border);
+  padding: 0;
+}
+.testimonial-dots button.is-active {
+  background: var(--vi-gold-600);
+  width: 22px;
+  border-radius: 999px;
+}
+
+/* ---- CTA band ---- */
+.cta-band {
+  background: linear-gradient(135deg, var(--vi-navy-950), var(--vi-navy-800));
+  border-radius: var(--vi-radius-lg);
+  padding: clamp(2.25rem, 5vw, 3.5rem);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band h2 {
+  color: #fff;
+}
+.cta-band p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* ---- FAQ accordion tweaks ---- */
+.vi-accordion .accordion-item {
+  border: 1px solid var(--vi-border);
+  border-radius: var(--vi-radius-sm) !important;
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+}
+.vi-accordion .accordion-button {
+  font-weight: 600;
+  font-family: var(--vi-font-display);
+  font-size: 1.02rem;
+  color: var(--vi-navy-900);
+}
+.vi-accordion .accordion-button:not(.collapsed) {
+  background: var(--vi-navy-100);
+  color: var(--vi-navy-900);
+  box-shadow: none;
+}
+.vi-accordion .accordion-button:focus {
+  box-shadow: none;
+  outline: 3px solid var(--vi-gold-600);
+  outline-offset: -3px;
+}
+/* =========================================
+   FOUNDER SECTION
+========================================= */
+
+.founder-section {
+  padding: 60px 0;
+}
+
+/* Heading above the card */
+
+.founder-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+.founder-heading h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--vi-text, #172033);
+}
+
+.founder-heading p {
+  margin: 0;
+  color: var(--vi-muted, #667085);
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FOUNDER CARD
+========================================= */
+
+.founder-card {
+  display: flex;
+  flex-direction: row; /* image + details in same row */
+  align-items: center;
+  gap: 50px;
+
+  padding: 40px;
+ 
+
+  background: #fff;
+  border: 1px solid var(--vi-border, #e8edf3);
+  border-radius: var(--vi-radius-lg, 24px);
+
+  box-shadow: 0 15px 45px rgba(20, 35, 60, 0.08);
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Top accent */
+
+.founder-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: var(--vi-primary, #062b63);
+}
+
+
+/* =========================================
+   FOUNDER IMAGE
+========================================= */
+
+.founder-image-wrapper {
+  flex: 0 0 300px;
+
+  width: 300px;
+  height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #f1f4f8;
+}
+
+.founder-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* Move the image content slightly down */
+  object-position: center 25%;
+
+  transition: transform 0.5s ease;
+}
+
+.founder-card:hover .founder-image {
+  transform: scale(1);
+}
+
+
+/* =========================================
+   FOUNDER DETAILS
+========================================= */
+
+.founder-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.founder-name {
+  margin: 0 0 6px;
+
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+
+  font-weight: 700;
+
+  color: var(--vi-text, #172033);
+}
+
+.founder-position {
+  margin: 0;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  color: var(--vi-primary, #062b63);
+}
+
+.founder-divider {
+  width: 55px;
+  height: 3px;
+
+  margin: 18px 0;
+
+  background: var(--vi-accent, #ffc107);
+
+  border-radius: 10px;
+}
+
+.founder-description {
+  margin-bottom: 14px;
+
+  color: var(--vi-muted, #667085);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .founder-card {
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .founder-image-wrapper {
+    flex: 0 0 230px;
+
+    width: 230px;
+    height: 230px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+  .founder-section {
+    padding: 45px 0;
+  }
+
+  .founder-heading {
+    margin-bottom: 30px;
+  }
+
+  .founder-card {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 25px;
+
+    padding: 30px 20px;
+  }
+
+  .founder-image-wrapper {
+    flex: none;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+  }
+
+  .founder-content {
+    width: 100%;
+  }
+
+  .founder-divider {
+    margin: 16px auto;
+  }
+
+  .founder-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .founder-image-wrapper {
+    width: 170px;
+    height: 170px;
+  }
+
+  .founder-card {
+    padding: 25px 16px;
+  }
+
+}
