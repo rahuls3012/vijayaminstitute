@@ -130,7 +130,7 @@ export default function About() {
             <div className="col-12 col-lg-6 reveal reveal-delay-2">
               <div className="vi-card p-0 overflow-hidden" style={{ borderRadius: 'var(--vi-radius-lg)' }}>
                 <img
-                  src="https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=NH10qLuxG702jHp8-GAKYxxlNHSfnnCesqib6Si2JGs="
+                  src="https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=NH10qLuxG702jHp8-GAKYxxlNHSfnnCesqib6Si2JGs= "
                   alt="Students discussing coursework in a study space"
                   loading="lazy"
                   width="900"

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { submitAdmissionEnquiry } from '../data/api';
+import { courses } from '../data/courses';
 
 const INITIAL = {
   fullName: '',
@@ -111,16 +112,22 @@ export default function ContactForm() {
 
         <div className="col-12 col-md-6">
           <label htmlFor="course" className="form-label fw-semibold">Course Interested In</label>
-          <input
-            id="course"
-            name="course"
-            type="text"
-            className={`form-control ${errors.course ? 'is-invalid' : ''}`}
-            value={values.course}
-            onChange={handleChange}
-            placeholder="e.g. MBA, BCA"
-            required
-          />
+           <select
+    id="course"
+    name="course"
+    className={`form-control ${errors.course ? 'is-invalid' : ''}`}
+    value={values.course}
+    onChange={handleChange}
+    required
+  >
+    <option value="">Select a course</option>
+
+    {courses.map((course) => (
+      <option key={course.id} value={course.id}>
+        {course.name} - {course.fullName}
+      </option>
+    ))}
+  </select>
           {errors.course && <div className="invalid-feedback">{errors.course}</div>}
         </div>
 
