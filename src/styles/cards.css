@@ -628,7 +628,7 @@
 
 /* Top accent */
 
-.founder-card::before {
+/* .founder-card::before {
   content: "";
 
   position: absolute;
@@ -639,7 +639,7 @@
   height: 5px;
 
   background: var(--vi-primary, #062b63);
-}
+} */
 
 
 /* =========================================

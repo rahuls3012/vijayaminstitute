@@ -57,6 +57,15 @@ export default function Contact() {
       <section className="section">
         <div className="container-vi">
           <div className="row g-4">
+             <div className="col-12 col-lg-8">
+              <SectionTitle
+                eyebrow="Send an Enquiry"
+                title="Request Admission Guidance"
+                subtitle="Fill in the form and our team will get back to you with programme and eligibility guidance."
+              />
+              <ContactForm />
+            </div>
+
             <div className="col-12 col-lg-4">
               <div className="d-flex flex-column gap-3">
                 <div className="vi-card p-4 reveal">
@@ -87,7 +96,8 @@ export default function Contact() {
                     <i className="bi bi-whatsapp"></i>
                   </span>
                   <h3 className="h6 mb-2">WhatsApp</h3>
-                  <a href="https://wa.me/919443173657" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919443173657?text=Hi%2C%20I%27d%20like%20admission%20guidance%20from%20Vijayam%20Institute."
+target="_blank" rel="noopener noreferrer">
                     Chat with our admission team
                   </a>
                 </div>
@@ -102,14 +112,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="col-12 col-lg-8">
-              <SectionTitle
-                eyebrow="Send an Enquiry"
-                title="Request Admission Guidance"
-                subtitle="Fill in the form and our team will get back to you with programme and eligibility guidance."
-              />
-              <ContactForm />
-            </div>
+           
           </div>
         </div>
       </section>

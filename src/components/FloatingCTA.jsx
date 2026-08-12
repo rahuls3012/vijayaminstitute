@@ -34,7 +34,7 @@ export default function FloatingCTA() {
           <i className="bi bi-whatsapp" aria-hidden="true"></i>
           WhatsApp
         </a>
-        <Link to="/admission" className="apply">
+        <Link to="/contact" className="apply">
           <i className="bi bi-pencil-square" aria-hidden="true"></i>
           Apply
         </Link>

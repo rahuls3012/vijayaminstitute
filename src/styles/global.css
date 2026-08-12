@@ -214,13 +214,17 @@ main {
 
 /* ---- Glass panel ---- */
 .vi-glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(8, 24, 55, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--vi-radius-lg);
-}
 
+  border: 1px solid rgba(245, 190, 60, 0.35);
+  border-radius: var(--vi-radius-lg);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
 /* ---- Skip link ---- */
 .skip-link {
   position: absolute;
@@ -1035,4 +1039,21 @@ img {
   line-height: 1.65;
 
   font-size: 0.9rem;
+}
+.highlights-row {
+  position: relative;
+  z-index: 5;
+  margin-top: -4.5rem;
+}
+
+@media (max-width: 991px) {
+  .highlights-row {
+    margin-top: -4.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .highlights-row {
+    margin-top: -3.5rem;
+  }
 }

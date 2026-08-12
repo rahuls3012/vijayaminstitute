@@ -46,7 +46,8 @@ export default function Footer() {
             <a href="tel:+918903702523">
               <i className="bi bi-telephone-fill me-2" aria-hidden="true"></i>89037 02523
             </a>
-            <a href="https://wa.me/919443173657" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919443173657?text=Hi%2C%20I%27d%20like%20admission%20guidance%20from%20Vijayam%20Institute."
+ target="_blank" rel="noopener noreferrer">
               <i className="bi bi-whatsapp me-2" aria-hidden="true"></i>Chat on WhatsApp
             </a>
             <p className="mt-2 mb-0" style={{ color: 'rgba(231,237,245,0.78)' }}>

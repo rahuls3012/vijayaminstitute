@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 // Placeholder content — replace each entry with a real, verified student
 // testimonial (with permission) before publishing.
 const PLACEHOLDERS = [
-  { id: 1, quote: 'Student testimonial will appear here.', name: 'Programme graduate' },
-  { id: 2, quote: 'Student testimonial will appear here.', name: 'Working professional learner' },
-  { id: 3, quote: 'Student testimonial will appear here.', name: 'Online programme student' },
+  { id: 1, quote: 'Education is the key that opens the door to endless possibilities.', name: 'Keep Learning' },
+{ id: 2, quote: 'Every new skill you learn today brings you one step closer to the future you dream of.', name: 'Keep Growing' },
+{ id: 3, quote: 'Believe in your potential, embrace every opportunity to learn, and never stop moving forward.', name: 'Keep Moving Forward' },
 ];
 
 export default function Testimonials() {

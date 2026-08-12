@@ -81,7 +81,7 @@ export default function Home() {
       {/* Quick trust / feature stats */}
       <section className="section-tight" aria-label="Highlights">
         <div className="container-vi">
-          <div className="row g-3 g-lg-4" style={{ marginTop: '-4.5rem', position: 'relative', zIndex: 5 }}>
+        <div className="row g-3 g-lg-4 highlights-row">
             {[
               { icon: 'bi-mortarboard', label: 'University Programmes' },
               { icon: 'bi-shuffle', label: 'Flexible Learning' },
@@ -138,6 +138,68 @@ export default function Home() {
         </div>
       </section>
 
+ {/* Founder Profile */}
+  <section className="founder-section">
+  <div className="container-vi">
+
+    {/* Section Heading */}
+    <div className="founder-heading reveal">
+      <span className="eyebrow">Meet Our Founder</span>
+
+      <h2>Leadership Behind Vijayam Institute</h2>
+
+      <p>
+        Meet the vision behind Vijayam Institute and our commitment to
+        helping students make informed academic decisions.
+      </p>
+    </div>
+
+    {/* Founder Card */}
+    <div className="founder-card reveal">
+
+      {/* Image - Left */}
+      <div className="founder-image-wrapper">
+        <img
+          src="/founderimg.jpeg"
+          alt="Founder of Vijayam Institute"
+          className="founder-image"
+          width="500"
+          height="500"
+        />
+      </div>
+
+      {/* Details - Right */}
+      <div className="founder-content">
+
+        <h3 className="founder-name">
+          M A perumal
+        </h3>
+
+        <p className="founder-position">
+         University Coordinator
+        </p>
+
+        <div className="founder-divider"></div>
+
+        <p className="founder-description">
+          With a vision to make quality higher education more accessible,
+          our founder established Vijayam Institute to guide students and
+          working professionals towards the right academic opportunities.
+        </p>
+
+        <p className="founder-description mb-0">
+          Through personalized guidance and student-focused support, the
+          institute helps learners understand their programme options,
+          eligibility and admission process.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+   
       {/* Why Vijayam Institute */}
       <section className="section" id="why-us">
         <div className="container-vi">
@@ -313,7 +375,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="section" style={{ background: '#fff' }}>
         <div className="container-vi">
-          <SectionTitle eyebrow="Testimonials" title="What Our Students Say" align="center" />
+          <SectionTitle eyebrow="Learn. Grow. Succeed." title="Your Journey Starts Here" align="center" />
           <Testimonials />
         </div>
       </section>

@@ -39,7 +39,7 @@ export default function Hero() {
               <Link to="/courses" className="btn-vi-primary">
                 Explore Courses <i className="bi bi-arrow-right" aria-hidden="true"></i>
               </Link>
-              <Link to="/admission" className="btn-vi-secondary">
+              <Link to="/contact" className="btn-vi-secondary">
                 Apply Now
               </Link>
             </div>

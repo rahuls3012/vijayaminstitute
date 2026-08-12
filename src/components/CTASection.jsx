@@ -15,10 +15,11 @@ export default function CTASection() {
             <a href="tel:+919443173657" className="btn-vi-primary">
               <i className="bi bi-telephone-fill" aria-hidden="true"></i> Call Now
             </a>
-            <a href="https://wa.me/919443173657" target="_blank" rel="noopener noreferrer" className="btn-vi-secondary">
+            <a href= "https://wa.me/919443173657?text=Hi%2C%20I%27d%20like%20admission%20guidance%20from%20Vijayam%20Institute."
+ target="_blank" rel="noopener noreferrer" className="btn-vi-secondary">
               <i className="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
             </a>
-            <Link to="/admission" className="btn-vi-secondary">
+            <Link to="/contact" className="btn-vi-secondary">
               Apply Now
             </Link>
           </div>

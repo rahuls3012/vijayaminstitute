@@ -65,7 +65,7 @@ export default function Navbar() {
           </nav>
 
           <div className="vi-navbar-actions">
-            <Link to="/admission" className="btn-vi-primary d-none d-lg-inline-flex">
+            <Link to="/contact" className="btn-vi-primary d-none d-lg-inline-flex">
               Apply Now
             </Link>
             <button
@@ -100,7 +100,7 @@ export default function Navbar() {
             {item.label}
           </NavLink>
         ))}
-        <Link to="/admission" className="btn-vi-primary w-100 mt-3">
+        <Link to="/contact" className="btn-vi-primary w-100 mt-3">
           Apply Now
         </Link>
       </nav>
