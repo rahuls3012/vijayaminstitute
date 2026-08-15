@@ -171,9 +171,13 @@ export default function Home() {
       {/* Details - Right */}
       <div className="founder-content">
 
-        <h3 className="founder-name">
-          M A perumal
-        </h3>
+        <div className="founder-info">
+  <h3 className="founder-name">M A Perumal</h3>
+  <span className="founder-education">
+    M.Tech., M.B.A.,L.L.B.
+  </span>
+</div>
+       
 
         <p className="founder-position">
          University Coordinator

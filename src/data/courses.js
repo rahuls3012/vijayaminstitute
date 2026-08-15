@@ -23,7 +23,7 @@ export const courses = [
     fullName: 'Bachelor of Arts',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular', 'ODL'],
+    modes: ['ODL'],
     description:
       'A broad-based undergraduate programme across humanities and social science disciplines, suited to learners building a foundation for further study or public-sector careers.',
     universityIds: ['msu', 'alagappa'],
@@ -34,7 +34,7 @@ export const courses = [
     fullName: 'Bachelor of Commerce',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular', 'Online', 'ODL'],
+    modes: [ 'Online', 'ODL'],
     description:
       'Undergraduate commerce education covering accounting, taxation, business law and finance fundamentals for careers in finance and administration.',
     universityIds: ['bdu', 'msu', 'alagappa'],
@@ -45,7 +45,7 @@ export const courses = [
     fullName: 'Bachelor of Science',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular'],
+    modes: ['Online',"ODL"],
     description:
       'Science stream undergraduate degree with options across mathematics, computer science and allied disciplines, depending on the affiliated university.',
     universityIds: ['bdu', 'msu'],
@@ -56,7 +56,7 @@ export const courses = [
     fullName: 'Bachelor of Business Administration',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular', 'Online'],
+    modes: [ 'Online'],
     description:
       'Management-focused undergraduate programme introducing business fundamentals, communication and early leadership skills.',
     universityIds: ['bdu', 'alagappa'],
@@ -67,7 +67,7 @@ export const courses = [
     fullName: 'Bachelor of Computer Applications',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular'],
+    modes: ["Online","ODL"],
     description:
       'Computer applications degree covering programming, systems and application development fundamentals for entry into the IT sector.',
     universityIds: ['bdu', 'msu'],
@@ -78,7 +78,7 @@ export const courses = [
     fullName: 'Bachelor of Library and Information Science',
     category: 'UG',
     type: 'Undergraduate',
-    modes: ['Regular', 'ODL'],
+    modes: ["Online", 'ODL'],
     description:
       'Professional undergraduate programme in library and information science for careers in academic, public and institutional libraries.',
     universityIds: ['alagappa'],
@@ -89,7 +89,7 @@ export const courses = [
     fullName: 'Master of Arts',
     category: 'PG',
     type: 'Postgraduate',
-    modes: ['Regular', 'ODL'],
+    modes: ['Online', 'ODL'],
     description:
       'Postgraduate specialisation in humanities and social science subjects for learners advancing an existing UG qualification.',
     universityIds: ['msu', 'alagappa'],
@@ -100,7 +100,7 @@ export const courses = [
     fullName: 'Master of Commerce',
     category: 'PG',
     type: 'Postgraduate',
-    modes: ['Regular', 'Online', 'ODL'],
+    modes: [ 'Online', 'ODL'],
     description:
       'Advanced commerce postgraduate programme covering financial management, accounting theory and research methods.',
     universityIds: ['bdu', 'msu'],
@@ -111,7 +111,7 @@ export const courses = [
     fullName: 'Master of Science',
     category: 'PG',
     type: 'Postgraduate',
-    modes: ['Regular'],
+    modes: ['Online','ODL'],
     description:
       'Postgraduate science specialisation building on an undergraduate science degree, subject to the affiliated university offering.',
     universityIds: ['bdu'],
@@ -122,7 +122,7 @@ export const courses = [
     fullName: 'Master of Business Administration',
     category: 'MBA',
     type: 'Professional',
-    modes: ['Regular', 'Online', 'ODL'],
+    modes: [ 'Online', 'ODL'],
     description:
       'Professional management programme for graduates seeking to move into leadership, strategy and cross-functional business roles while continuing to work.',
     universityIds: ['bdu', 'alagappa'],
@@ -133,7 +133,7 @@ export const courses = [
     fullName: 'Master of Computer Applications',
     category: 'MCA',
     type: 'Professional',
-    modes: ['Regular', 'Online'],
+    modes: ['Online'],
     description:
       'Professional postgraduate programme in computer applications for eligible graduates pursuing software and IT careers.',
     universityIds: ['bdu', 'msu'],
@@ -144,7 +144,7 @@ export const courses = [
     fullName: 'Diploma & Certificate Programmes',
     category: 'Diploma',
     type: 'Diploma',
-    modes: ['Regular', 'ODL'],
+    modes: ["Online", 'ODL'],
     description:
       'Short-duration diploma and certificate options across commerce, computer applications and management topics for focused, career-oriented learning.',
     universityIds: ['msu', 'alagappa'],
