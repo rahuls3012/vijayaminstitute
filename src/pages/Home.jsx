@@ -174,7 +174,7 @@ export default function Home() {
         <div className="founder-info">
   <h3 className="founder-name">M A Perumal</h3>
   <span className="founder-education">
-   B.G.L., M.Tech., M.B.A.,L.L.B.
+    M.Tech., M.B.A.,B.G.L.,L.L.B.
   </span>
 </div>
        
