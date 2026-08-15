@@ -14,6 +14,29 @@
 // with the university's official logo asset once sourced and verified.
 
 export const universities = [
+   {
+    id: 'bdu',
+    name: 'Bharathidasan University',
+    initials: 'BU',
+    city: 'Tiruchirappalli',
+    location: 'Palkalaiperur, Tiruchirappalli, Tamil Nadu',
+    established: 1982,
+    type: 'Public State University',
+    naac: "NAAC 'A+' Grade (3rd Cycle)",
+    recognition: 'UGC-recognized',
+    website: 'https://www.bdu.ac.in',
+    coverImage: 'bdu.webp',
+    about:
+      'Named after the Tamil poet Bharathidasan, the university has offered undergraduate, postgraduate and research programmes from its Tiruchirappalli campuses since 1982.',
+    highlights: [
+      "Motto: \u201cWe will create a brave new world\u201d, from Bharathidasan\u2019s own poetry",
+      'Centre for Distance and Online Education (CDOE) offers online UG and PG programmes',
+      'Campuses at Palkalaiperur and Khajamalai, Tiruchirappalli',
+    ],
+    programmes: ['UG', 'PG', 'MBA', 'MCA'],
+    modes: ['Regular', 'Online', 'ODL'],
+  },
+  
   
   {
     id: 'msu',
@@ -105,29 +128,7 @@ export const universities = [
     'Work-Integrated Learning',
   ],
 },  
-  {
-    id: 'bdu',
-    name: 'Bharathidasan University',
-    initials: 'BU',
-    city: 'Tiruchirappalli',
-    location: 'Palkalaiperur, Tiruchirappalli, Tamil Nadu',
-    established: 1982,
-    type: 'Public State University',
-    naac: "NAAC 'A+' Grade (3rd Cycle)",
-    recognition: 'UGC-recognized',
-    website: 'https://www.bdu.ac.in',
-    coverImage: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop',
-    about:
-      'Named after the Tamil poet Bharathidasan, the university has offered undergraduate, postgraduate and research programmes from its Tiruchirappalli campuses since 1982.',
-    highlights: [
-      "Motto: \u201cWe will create a brave new world\u201d, from Bharathidasan\u2019s own poetry",
-      'Centre for Distance and Online Education (CDOE) offers online UG and PG programmes',
-      'Campuses at Palkalaiperur and Khajamalai, Tiruchirappalli',
-    ],
-    programmes: ['UG', 'PG', 'MBA', 'MCA'],
-    modes: ['Regular', 'Online', 'ODL'],
-  },
-  
+ 
 ];
 
 export const universityDisclaimer =
