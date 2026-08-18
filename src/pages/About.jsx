@@ -88,7 +88,7 @@ export default function About() {
 </div>
        
         <p className="founder-position">
-         University Coordinator
+         University Coordinator (DSG)
         </p>
 
         <div className="founder-divider"></div>

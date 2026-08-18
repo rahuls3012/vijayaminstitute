@@ -180,7 +180,7 @@ export default function Home() {
        
 
         <p className="founder-position">
-         University Coordinator
+         University Coordinator (DSG)
         </p>
 
         <div className="founder-divider"></div>
