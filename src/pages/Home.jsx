@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Vijayam Institute, Nagercoil | UG, PG, MBA & MCA Admissions"
+        title="Vijayam Institute, Nagercoil | UG, PG, MBA & MCA Admissions "
         description="Explore UG, PG, MBA, MCA, online and open-distance learning programmes with Vijayam Institute, Vadasery, Nagercoil."
         path="/"
         jsonLd={jsonLd}
