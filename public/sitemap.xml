@@ -1,48 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://www.vijayaminstitute.in/</loc>
+    <loc>https://distanceeducationnagercoil.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/about</loc>
+    <loc>https://distanceeducationnagercoil.in/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/courses</loc>
+    <loc>https://distanceeducationnagercoil.in/courses</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/universities</loc>
+    <loc>https://distanceeducationnagercoil.in/universities</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/online-learning</loc>
+    <loc>https://distanceeducationnagercoil.in/online-learning</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/odl</loc>
+    <loc>https://distanceeducationnagercoil.in/odl</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/admission</loc>
+    <loc>https://distanceeducationnagercoil.in/admission</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/faq</loc>
+    <loc>https://distanceeducationnagercoil.in/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://www.vijayaminstitute.in/contact</loc>
+    <loc>https://distanceeducationnagercoil.in/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>
