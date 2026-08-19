@@ -573,15 +573,16 @@
   outline-offset: -3px;
 }
 /* =========================================
-   FOUNDER SECTION
+   DESKTOP / LAPTOP
 ========================================= */
+
 .founder-info {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -600,9 +601,28 @@
   white-space: nowrap;
 }
 
-@media (max-width: 767.98px) {
-  .founder-info {
+.founder-position {
+  width: 100%;
+  margin: 8px 0 0;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--vi-primary, #062b63);
+}
+
+
+/* =========================================
+   TABLET + MOBILE
+========================================= */
+
+@media (max-width: 991.98px) {
+
+  .founder-content {
     width: 100%;
+    text-align: center;
+  }
+
+  .founder-info {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -617,11 +637,16 @@
   }
 
   .founder-education {
-    display: block;
     width: 100%;
     text-align: center;
     white-space: normal;
     word-break: break-word;
     font-size: 13px;
+  }
+
+  .founder-position {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 }

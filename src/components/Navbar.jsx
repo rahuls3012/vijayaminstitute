@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const NAV_ITEMS = [
   { label: 'Home', to: '/' },
+  { label:"Distance Education",to :'/distance-education-nagercoil'},
   { label: 'About Us', to: '/about' },
   { label: 'Courses', to: '/courses' },
   { label: 'Universities', to: '/universities' },

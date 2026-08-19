@@ -14,6 +14,7 @@ import Admission from './pages/Admission';
 import FAQPage from './pages/FAQPage';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import DistanceEducationNagercoil from './pages/distanceeducation';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <main id="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+           <Route path="/distance-education-nagercoil" element={<DistanceEducationNagercoil />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/universities" element={<Universities />} />
