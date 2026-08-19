@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const SITE_URL = 'https://distanceeducationatnagercoil.in/';
+const SITE_URL = 'https://distanceeducationatnagercoil.in';
 const SITE_NAME = 'Vijayam Institute';
 
 function setMeta(attr, key, value) {

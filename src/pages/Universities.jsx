@@ -38,7 +38,7 @@ export default function Universities() {
   return (
     <>
       <SEO
-        title="Associated Universities | Vijayam Institute Nagercoil"
+        title="Distance education Universities | Vijayam Institute Nagercoil"
         description="Meet the universities associated with Vijayam Institute — Bharathidasan University, Manonmaniam Sundaranar University and Alagappa University — for UG, PG, MBA, MCA and Diploma admission guidance."
         path="/universities"
         jsonLd={jsonLd}
