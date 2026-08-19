@@ -9,13 +9,25 @@ import CTASection from '../components/CTASection';
 import { getCoursesByCategory } from '../data/courses';
 import useScrollReveal from '../hooks/useScrollReveal';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
+const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name: 'Courses', item: `${SITE_URL}/courses` },
   ],
+};
+
+const webPageSchema = {
+  '@type': 'WebPage',
+  name: 'Distance Education Courses at Nagercoil',
+  description:
+    'UG, PG, MBA, MCA, Diploma, Online and ODL programmes available through Vijayam Institute\u2019s associated universities at Nagercoil.',
+  url: `${SITE_URL}/courses`,
+};
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema, webPageSchema],
 };
 
 export default function Courses() {
@@ -46,16 +58,16 @@ export default function Courses() {
   return (
     <>
       <SEO
-        title="UG & PG Courses in Nagercoil | Vijayam Institute"
-        description="Browse UG, PG, MBA, MCA, Diploma, Online and ODL programmes available through Vijayam Institute's associated universities in Nagercoil."
+        title="UG & PG Courses | Distance Education at Nagercoil — Vijayam Institute"
+        description="Browse UG, PG, MBA, MCA, Diploma, Online and ODL programmes for distance education at Nagercoil, available through Vijayam Institute's associated universities."
         path="/courses"
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
       />
 
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>Programmes</span>
-          <h1>Explore Our Programmes</h1>
+          <h1>Distance Education Courses at Nagercoil</h1>
           <p>Choose the right programme for your academic and career goals.</p>
         </div>
       </header>

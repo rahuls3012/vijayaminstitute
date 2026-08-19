@@ -12,13 +12,25 @@ const VALUES = [
   { icon: 'bi-arrow-repeat', title: 'Continued Support', description: 'Our team stays reachable throughout your programme, not just at admission.' },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
+const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name: 'About Us', item: `${SITE_URL}/about` },
   ],
+};
+
+const webPageSchema = {
+  '@type': 'AboutPage',
+  name: 'About Vijayam Institute — Distance Education at Nagercoil',
+  description:
+    'Vijayam Institute is a distance education and admission guidance centre in Vadasery, Nagercoil, supporting UG, PG, MBA, MCA, Diploma, Online and ODL learners.',
+  url: `${SITE_URL}/about`,
+};
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema, webPageSchema],
 };
 
 export default function About() {
@@ -27,16 +39,16 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Vijayam Institute | Nagercoil Admission Guidance"
-        description="Learn about Vijayam Institute, an admission guidance centre in Vadasery, Nagercoil, supporting UG, PG, MBA, MCA, Diploma, Online and ODL learners."
+        title="About Us | Distance Education at Nagercoil — Vijayam Institute"
+        description="Vijayam Institute is a trusted centre for distance education at Nagercoil, guiding UG, PG, MBA, MCA, Diploma, Online and ODL learners in Vadasery."
         path="/about"
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
       />
 
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>About Us</span>
-          <h1>Guiding Students Toward the Right Programme</h1>
+          <h1>Your Local Partner for Distance Education at Nagercoil</h1>
           <p>
             Vijayam Institute is an education and admission guidance centre based in Vadasery,
             Nagercoil, supporting learners through UG, PG, MBA, MCA, Diploma, Online Learning
@@ -47,82 +59,70 @@ export default function About() {
 
       <Breadcrumbs items={[{ label: 'Home', to: '/' }, { label: 'About Us' }]} />
 
- {/* Founder Profile */}
-<section className="founder-section">
-  <div className="container-vi">
+      {/* Founder Profile */}
+      <section className="founder-section">
+        <div className="container-vi">
+          <div className="founder-heading reveal">
+            <span className="eyebrow">Meet Our Founder</span>
+            <h2>Leadership Behind Vijayam Institute</h2>
+            <p>
+              Meet the vision behind Vijayam Institute and our commitment to
+              helping students in Nagercoil make informed academic decisions.
+            </p>
+          </div>
 
-    {/* Section Heading */}
-    <div className="founder-heading reveal">
-      <span className="eyebrow">Meet Our Founder</span>
+          <div className="founder-card reveal">
+            <div className="founder-image-wrapper">
+              <img
+                src="/founderimg.jpeg"
+                alt="M A Perumal, Founder and University Coordinator at Vijayam Institute Nagercoil"
+                className="founder-image"
+                width="500"
+                height="500"
+              />
+            </div>
 
-      <h2>Leadership Behind Vijayam Institute</h2>
+            <div className="founder-content">
+              <div className="founder-info">
+                <h3 className="founder-name">M A Perumal</h3>
+                <span className="founder-education">
+                  M.Tech., M.B.A., B.G.L., L.L.B.
+                </span>
+              </div>
 
-      <p>
-        Meet the vision behind Vijayam Institute and our commitment to
-        helping students make informed academic decisions.
-      </p>
-    </div>
+              <p className="founder-position">
+                University Coordinator (DSG)
+              </p>
 
-    {/* Founder Card */}
-    <div className="founder-card reveal">
+              <div className="founder-divider"></div>
 
-      {/* Image - Left */}
-      <div className="founder-image-wrapper">
-        <img
-          src="/founderimg.jpeg"
-          alt="Founder of Vijayam Institute"
-          className="founder-image"
-          width="500"
-          height="500"
-        />
-      </div>
+              <p className="founder-description">
+                With a vision to make quality higher education more accessible,
+                our founder established Vijayam Institute to guide students and
+                working professionals towards the right academic opportunities.
+              </p>
 
-      {/* Details - Right */}
-      <div className="founder-content">
-
-       <div className="founder-info">
-  <h3 className="founder-name">M A Perumal</h3>
-  <span className="founder-education">
- M.Tech., M.B.A.,  B.G.L.,L.L.B.
-  </span>
-</div>
-       
-        <p className="founder-position">
-         University Coordinator (DSG)
-        </p>
-
-        <div className="founder-divider"></div>
-
-        <p className="founder-description">
-          With a vision to make quality higher education more accessible,
-          our founder established Vijayam Institute to guide students and
-          working professionals towards the right academic opportunities.
-        </p>
-
-        <p className="founder-description mb-0">
-          Through personalized guidance and student-focused support, the
-          institute helps learners understand their programme options,
-          eligibility and admission process.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
+              <p className="founder-description mb-0">
+                Through personalized guidance and student-focused support, the
+                institute helps learners understand their programme options,
+                eligibility and admission process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="section">
         <div className="container-vi">
           <div className="row align-items-center g-4 g-lg-5">
             <div className="col-12 col-lg-6 reveal">
               <span className="eyebrow">Who We Are</span>
-              <h2 className="mt-2 mb-3">A Local Team Focused on Your Academic Journey</h2>
+              <h2 className="mt-2 mb-3">A Local Team Focused on Distance Education at Nagercoil</h2>
               <p className="text-muted-vi">
                 We work with learners across Kanyakumari District — students moving from school to
                 undergraduate study, graduates exploring postgraduate and professional programmes,
-                and working professionals looking to continue their education through flexible
-                formats.
+                and working professionals looking to continue their education through flexible,
+                distance-friendly formats.
               </p>
               <p className="text-muted-vi mb-0">
                 Our role is to make the admission journey clear: understanding programme options,
@@ -133,8 +133,8 @@ export default function About() {
             <div className="col-12 col-lg-6 reveal reveal-delay-2">
               <div className="vi-card p-0 overflow-hidden" style={{ borderRadius: 'var(--vi-radius-lg)' }}>
                 <img
-                  src="https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=NH10qLuxG702jHp8-GAKYxxlNHSfnnCesqib6Si2JGs= "
-                  alt="Students discussing coursework in a study space"
+                  src="https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.webp?a=1&b=1&s=612x612&w=0&k=20&c=NH10qLuxG702jHp8-GAKYxxlNHSfnnCesqib6Si2JGs="
+                  alt="Students discussing distance education coursework in a study space at Nagercoil"
                   loading="lazy"
                   width="900"
                   height="700"

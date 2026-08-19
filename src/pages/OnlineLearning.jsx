@@ -13,13 +13,25 @@ const FEATURES = [
   { icon: 'bi-person-check', title: 'Guided Enrolment', description: 'Our team helps you choose an online programme suited to your background.' },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
+const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name: 'Online & ODL', item: `${SITE_URL}/online-learning` },
   ],
+};
+
+const webPageSchema = {
+  '@type': 'WebPage',
+  name: 'Online Learning & Distance Education at Nagercoil',
+  description:
+    'Online Learning and Open & Distance Learning (ODL) programmes available through Vijayam Institute\u2019s associated universities, for learners at Nagercoil and Kanyakumari District.',
+  url: `${SITE_URL}/online-learning`,
+};
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema, webPageSchema],
 };
 
 export default function OnlineLearning() {
@@ -28,16 +40,16 @@ export default function OnlineLearning() {
   return (
     <>
       <SEO
-        title="Online Learning & ODL Programmes | Vijayam Institute"
-        description="Explore Online Learning and Open & Distance Learning (ODL) programmes available through Vijayam Institute's associated universities."
+        title="Online Learning & ODL | Distance Education at Nagercoil — Vijayam Institute"
+        description="Explore Online Learning and Open & Distance Learning (ODL) — flexible distance education at Nagercoil through Vijayam Institute's associated universities."
         path="/online-learning"
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
       />
 
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>Flexible Learning</span>
-          <h1>Online &amp; Open Distance Learning</h1>
+          <h1>Online Learning & Distance Education at Nagercoil</h1>
           <p>Continue your education on a schedule that works for you, wherever you are.</p>
         </div>
       </header>
@@ -66,12 +78,13 @@ export default function OnlineLearning() {
           <div className="row align-items-center g-4 g-lg-5">
             <div className="col-12 col-lg-6 reveal">
               <span className="eyebrow">Open &amp; Distance Learning</span>
-              <h2 className="mt-2 mb-3">What is ODL?</h2>
+              <h2 className="mt-2 mb-3">What is Distance Education (ODL)?</h2>
               <p className="text-muted-vi">
                 Open &amp; Distance Learning (ODL) allows you to study without attending regular
                 classroom sessions. Learners typically receive study material, periodic contact
                 classes and assessments as defined by the offering university &mdash; making it
-                well suited to working professionals and learners managing other commitments.
+                well suited to working professionals and learners managing other commitments in
+                and around Nagercoil.
               </p>
               <p className="text-muted-vi mb-4">
                 ODL programmes are offered through our associated universities in categories
@@ -86,7 +99,7 @@ export default function OnlineLearning() {
               <div className="vi-card p-0 overflow-hidden" style={{ borderRadius: 'var(--vi-radius-lg)' }}>
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=900&auto=format&fit=crop"
-                  alt="Learner studying with course material at home"
+                  alt="Learner studying distance education course material at home near Nagercoil"
                   loading="lazy"
                   width="900"
                   height="700"

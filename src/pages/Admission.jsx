@@ -16,13 +16,33 @@ const DOCUMENTS = [
   { icon: 'bi-camera', label: 'Passport-size Photograph' },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
+// Breadcrumb schema, kept as its own '@type' and merged with an
+// EducationalOccupationalProgram-style hint via @graph, so this page
+// carries local/keyword relevance signals too, not just navigation structure.
+const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name: 'Admission', item: `${SITE_URL}/admission` },
   ],
+};
+
+const webPageSchema = {
+  '@type': 'WebPage',
+  name: 'Distance Education Admission at Nagercoil',
+  description:
+    'Admission process, eligibility checker and required documents for UG, PG, MBA, MCA, Online and Distance Education programmes at Vijayam Institute, Nagercoil.',
+  url: `${SITE_URL}/admission`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Vijayam Institute',
+    url: SITE_URL,
+  },
+};
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema, webPageSchema],
 };
 
 export default function Admission() {
@@ -31,17 +51,17 @@ export default function Admission() {
   return (
     <>
       <SEO
-        title="Admissions 2026\u201327 | Vijayam Institute Nagercoil"
-        description="Start your admission journey with Vijayam Institute — simple steps, required documents and an eligibility checker for UG, PG, MBA, MCA, Online and ODL programmes."
+        title="Distance Education Admission at Nagercoil 2026\u201327 | Vijayam Institute"
+        description="Apply for distance education at Nagercoil with Vijayam Institute. Simple admission steps, required documents and a free eligibility checker for UG, PG, MBA, MCA, Online and ODL programmes."
         path="/admission"
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
       />
 
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>Admissions Open 2026&ndash;27</span>
-          <h1>Start Your Admission Journey</h1>
-          <p>A simple, guided path from choosing your programme to starting class.</p>
+          <h1>Distance Education Admission at Nagercoil</h1>
+          <p>A simple, guided path from choosing your programme to starting class — for UG, PG, MBA, MCA, Online and ODL learners.</p>
         </div>
       </header>
 
@@ -49,7 +69,7 @@ export default function Admission() {
 
       <section className="section">
         <div className="container-vi">
-          <SectionTitle eyebrow="Getting Started" title="Simple Admission Process" align="center" />
+          <SectionTitle eyebrow="Getting Started" title="Simple Admission Process for Distance Education" align="center" />
           <AdmissionTimeline />
         </div>
       </section>
@@ -58,7 +78,7 @@ export default function Admission() {
         <div className="container-vi">
           <SectionTitle
             eyebrow="Guidance Tool"
-            title="Find The Right Programme For You"
+            title="Find The Right Distance Education Programme For You"
             subtitle="Answer three quick questions for a starting recommendation."
             align="center"
           />
@@ -72,7 +92,7 @@ export default function Admission() {
 
       <section className="section">
         <div className="container-vi">
-          <SectionTitle eyebrow="Prepare Ahead" title="Documents Required" />
+          <SectionTitle eyebrow="Prepare Ahead" title="Documents Required for Admission" />
           <div className="row g-3">
             {DOCUMENTS.map((d, i) => (
               <div className="col-12 col-sm-6 col-lg-4" key={d.label}>

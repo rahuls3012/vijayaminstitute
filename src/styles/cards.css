@@ -575,242 +575,53 @@
 /* =========================================
    FOUNDER SECTION
 ========================================= */
-
-.founder-section {
-  padding: 60px 0;
-}
-
-/* Heading above the card */
-
-.founder-heading {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 40px;
-}
-
-.founder-heading h2 {
-  margin: 10px 0 12px;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: var(--vi-text, #172033);
-}
-
-.founder-heading p {
-  margin: 0;
-  color: var(--vi-muted, #667085);
-  line-height: 1.7;
-}
-
-
-/* =========================================
-   FOUNDER CARD
-========================================= */
-
-.founder-card {
+.founder-info {
+  width: 100%;
   display: flex;
-  flex-direction: row; /* image + details in same row */
+  flex-direction: row;
   align-items: center;
-  gap: 50px;
-
-  padding: 40px;
- 
-
-  background: #fff;
-  border: 1px solid var(--vi-border, #e8edf3);
-  border-radius: var(--vi-radius-lg, 24px);
-
-  box-shadow: 0 15px 45px rgba(20, 35, 60, 0.08);
-
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-
-/* Top accent */
-
-/* .founder-card::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 5px;
-
-  background: var(--vi-primary, #062b63);
-} */
-
-
-/* =========================================
-   FOUNDER IMAGE
-========================================= */
-
-.founder-image-wrapper {
-  flex: 0 0 300px;
-
-  width: 300px;
-  height: 300px;
-
-  overflow: hidden;
-
-  border-radius: 20px;
-
-  background: #f1f4f8;
-}
-
-.founder-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  /* Move the image content slightly down */
-  object-position: center 25%;
-
-  transition: transform 0.5s ease;
-}
-
-.founder-card:hover .founder-image {
-  transform: scale(1);
-}
-
-
-/* =========================================
-   FOUNDER DETAILS
-========================================= */
-
-.founder-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.founder-name {
-  margin: 0 0 6px;
-
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-
+.founder-info .founder-name {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
   font-weight: 700;
-
   color: var(--vi-text, #172033);
 }
 
-.founder-position {
-  margin: 0;
-
-  font-size: 1.05rem;
-
-  font-weight: 600;
-
-  color: var(--vi-primary, #062b63);
+.founder-education {
+  display: block;
+  font-size: 16px;
+  color: #666;
+  white-space: nowrap;
 }
-
-.founder-divider {
-  width: 55px;
-  height: 3px;
-
-  margin: 18px 0;
-
-  background: var(--vi-accent, #ffc107);
-
-  border-radius: 10px;
-}
-
-.founder-description {
-  margin-bottom: 14px;
-
-  color: var(--vi-muted, #667085);
-
-  font-size: 1rem;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 991.98px) {
-
-  .founder-card {
-    gap: 30px;
-    padding: 30px;
-  }
-
-  .founder-image-wrapper {
-    flex: 0 0 230px;
-
-    width: 230px;
-    height: 230px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 767.98px) {
-
-  .founder-section {
-    padding: 45px 0;
-  }
-
-  .founder-heading {
-    margin-bottom: 30px;
-  }
-
-  .founder-card {
+  .founder-info {
+    width: 100%;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
     text-align: center;
-
-    gap: 25px;
-
-    padding: 30px 20px;
+    gap: 4px;
   }
 
-  .founder-image-wrapper {
-    flex: none;
-
-    width: 200px;
-    height: 200px;
-
-    border-radius: 50%;
-  }
-
-  .founder-content {
+  .founder-info .founder-name {
     width: 100%;
+    text-align: center;
+    font-size: 20px;
   }
 
-  .founder-divider {
-    margin: 16px auto;
+  .founder-education {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 13px;
   }
-
-  .founder-description {
-    font-size: 0.95rem;
-    line-height: 1.65;
-  }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 400px) {
-
-  .founder-image-wrapper {
-    width: 170px;
-    height: 170px;
-  }
-
-  .founder-card {
-    padding: 25px 16px;
-  }
-
 }

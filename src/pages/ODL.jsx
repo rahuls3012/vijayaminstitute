@@ -13,13 +13,25 @@ const FEATURES = [
   { icon: 'bi-briefcase', title: 'Built for Working Learners', description: 'A format designed for professionals continuing their education.' },
 ];
 
-const jsonLd = {
-  '@context': 'https://schema.org',
+const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
     { '@type': 'ListItem', position: 2, name: 'ODL', item: `${SITE_URL}/odl` },
   ],
+};
+
+const webPageSchema = {
+  '@type': 'WebPage',
+  name: 'ODL — Distance Education at Nagercoil',
+  description:
+    'How Open & Distance Learning (ODL) works, and ODL programmes available through Vijayam Institute\u2019s associated universities at Nagercoil.',
+  url: `${SITE_URL}/odl`,
+};
+
+const combinedJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [breadcrumbSchema, webPageSchema],
 };
 
 export default function ODL() {
@@ -28,16 +40,16 @@ export default function ODL() {
   return (
     <>
       <SEO
-        title="Open & Distance Learning (ODL) Programmes | Vijayam Institute"
-        description="Learn how Open & Distance Learning (ODL) works and explore ODL programmes available through Vijayam Institute's associated universities."
+        title="ODL Programmes | Distance Education at Nagercoil — Vijayam Institute"
+        description="Learn how Open & Distance Learning (ODL) works and explore ODL-based distance education at Nagercoil through Vijayam Institute's associated universities."
         path="/odl"
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
       />
 
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>ODL</span>
-          <h1>Open &amp; Distance Learning</h1>
+          <h1>ODL — Distance Education at Nagercoil</h1>
           <p>Continue your education through Open &amp; Distance Learning, at your own pace.</p>
         </div>
       </header>

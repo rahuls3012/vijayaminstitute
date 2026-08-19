@@ -18,6 +18,9 @@ const jsonLd = {
     {
       '@type': 'LocalBusiness',
       name: 'Vijayam Institute',
+      alternateName: 'Distance Education at Nagercoil',
+      description:
+        'Admission guidance centre for distance education, online learning and ODL programmes in Vadasery, Nagercoil.',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Vadasery',
@@ -26,8 +29,21 @@ const jsonLd = {
         postalCode: '629003',
         addressCountry: 'IN',
       },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 8.1833,
+        longitude: 77.4119,
+      },
+      areaServed: [
+        { '@type': 'City', name: 'Nagercoil' },
+        { '@type': 'AdministrativeArea', name: 'Kanyakumari District' },
+      ],
       telephone: ['+919443173657', '+918903702523'],
       url: `${SITE_URL}/contact`,
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      },
     },
   ],
 };
@@ -38,8 +54,8 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact Vijayam Institute | Vadasery, Nagercoil"
-        description="Contact Vijayam Institute for admission guidance — phone, WhatsApp, address and an online enquiry form. Vadasery, Nagercoil, Kanyakumari District."
+        title="Contact Us | Distance Education at Nagercoil — Vijayam Institute"
+        description="Contact Vijayam Institute for distance education admission guidance at Nagercoil — phone, WhatsApp, address and an online enquiry form. Vadasery, Kanyakumari District."
         path="/contact"
         jsonLd={jsonLd}
       />
@@ -47,7 +63,7 @@ export default function Contact() {
       <header className="vi-page-header">
         <div className="container-vi">
           <span className="eyebrow" style={{ color: 'var(--vi-gold-400)' }}>Get In Touch</span>
-          <h1>Contact Vijayam Institute</h1>
+          <h1>Contact Us for Distance Education at Nagercoil</h1>
           <p>Have a question about programmes or admission? Reach out — we're happy to help.</p>
         </div>
       </header>
@@ -119,7 +135,7 @@ target="_blank" rel="noopener noreferrer">
 
       <section className="section" style={{ background: '#fff' }}>
         <div className="container-vi">
-          <SectionTitle eyebrow="Find Us" title="Visit Our Office" />
+          <SectionTitle eyebrow="Find Us" title="Visit Our Office in Nagercoil" />
           <MapEmbed />
         </div>
       </section>

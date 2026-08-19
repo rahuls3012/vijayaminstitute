@@ -240,38 +240,6 @@ main {
   left: 0;
 }
 
-.founder-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.founder-name {
-  margin: 0;
-  font-size: 24px;
-}
-
-.founder-education {
-  font-size: 16px;
-  color: #666;
-  white-space: nowrap;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .founder-info {
-    gap: 6px;
-  }
-
-  .founder-name {
-    font-size: 20px;
-  }
-
-  .founder-education {
-    font-size: 13px;
-  }
-}
 
 /* ---- Floating shapes ---- */
 .vi-floating {
